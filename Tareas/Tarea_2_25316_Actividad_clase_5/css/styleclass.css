@@ -1,0 +1,31 @@
+.tb{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.tb th, .tb td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.letra{
+    font-size: 18px;
+    color: #000000;
+    text-align: left;
+    margin-top: 20px;
+    
+}
+
+.tb2{
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+
+}
+
+

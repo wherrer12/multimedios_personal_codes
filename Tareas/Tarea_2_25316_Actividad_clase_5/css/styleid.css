@@ -1,0 +1,62 @@
+#maintitle{
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#mainnav{
+    text-align: center;
+    margin-top: 20px;
+   
+}
+
+#subtitulo{
+    font-size: 40px;
+    color: #000000;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#subtitulo2{
+    font-size: 20px;
+    color: #15015f;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#infopersonal{
+    font-size: 25px;
+    color: #000000;
+    text-align: justify;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+#imagen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-radius: 20px;
+}
+
+#btn{
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: orange;
+}
+
+#ol_lis, #ul_lis{
+    margin-left: 32px;
+    font-size: 20px;
+    padding-left: 0px;
+}
+
+#ol_lis li, #ul_lis li{
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
