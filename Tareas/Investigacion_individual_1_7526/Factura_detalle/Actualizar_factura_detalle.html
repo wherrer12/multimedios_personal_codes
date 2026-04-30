@@ -45,20 +45,20 @@
                         aria-haspopup="true" aria-expanded="false">Grupos</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="../Crear_grupo.html">Crear grupo</a>
+                            <a class="dropdown-item" href="../Grupos/Crear_grupo.html">Crear grupo</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="../Consultar_grupo.html">Consultar grupos</a>
+                            <a class="dropdown-item" href="../Grupos/Consultar_grupo.html">Consultar grupos</a>
                         </li>
 
-                        <li>
-                            <a class="dropdown-item" href="../Actualizar_grupo.html">Actualizar grupo</a>
-                        </li>
+                         <li>
+                            <a class="dropdown-item" href="../Grupos/Actualizar_grupo.html">Actualizar grupo</a>
+                        </li> 
 
                         <li>
-                            <a class="dropdown-item" href="../Eliminar_grupo.html">Eliminar grupo</a>
-                        </li>
+                            <a class="dropdown-item" href="../Grupos/Eliminar_grupo.html">Eliminar grupo</a>
+                        </li> 
 
                     </ul>
 
@@ -170,31 +170,41 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="https://paginas-web-cr.com/Api/form/actualizarfacturadetalle.php" method="post">
+                        <form action="https://paginas-web-cr.com/Api/form/actualizarfacturadetalle.php" method="post" class="was-validated">
                             <div class="form-group">
                                 <label for="id" class="form-label">ID</label>
                                 <input type="text" class="form-control" id="id" name="id"
                                     placeholder="Digite el ID" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un ID válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="producto" class="form-label">Producto</label>
                                 <input type="text" class="form-control" id="producto" name="producto"
                                     placeholder="Digite el nombre del producto" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un nombre de producto válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="cantidad" class="form-label">Cantidad</label>
                                 <input type="number" class="form-control" id="cantidad" name="cantidad"
-                                    placeholder="Digite la cantidad" required>
+                                    placeholder="Digite la cantidad" required min="1"> 
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese una cantidad válida.</div>
                             </div>
                             <div class="form-group">
                                 <label for="precio" class="form-label">Precio</label>
                                 <input type="number" class="form-control" id="precio" name="precio"
                                     placeholder="Digite el precio" required step="0.01">
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un precio válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="usuario" class="form-label">Usuario</label>
                                 <input type="text" class="form-control" id="usuario" name="usuario"
                                     placeholder="Digite el usuario" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un usuario válido.</div>
                             </div>
 
                             <input type="hidden" name="return_url"

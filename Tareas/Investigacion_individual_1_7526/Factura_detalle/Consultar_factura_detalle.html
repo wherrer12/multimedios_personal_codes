@@ -45,20 +45,20 @@
                         aria-haspopup="true" aria-expanded="false">Grupos</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="../Crear_grupo.html">Crear grupo</a>
+                            <a class="dropdown-item" href="../Grupos/Crear_grupo.html">Crear grupo</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="../Consultar_grupo.html">Consultar grupos</a>
+                            <a class="dropdown-item" href="../Grupos/Consultar_grupo.html">Consultar grupos</a>
                         </li>
 
-                        <li>
-                            <a class="dropdown-item" href="../Actualizar_grupo.html">Actualizar grupo</a>
-                        </li>
+                         <li>
+                            <a class="dropdown-item" href="../Grupos/Actualizar_grupo.html">Actualizar grupo</a>
+                        </li> 
 
                         <li>
-                            <a class="dropdown-item" href="../Eliminar_grupo.html">Eliminar grupo</a>
-                        </li>
+                            <a class="dropdown-item" href="../Grupos/Eliminar_grupo.html">Eliminar grupo</a>
+                        </li> 
 
                     </ul>
 
@@ -170,11 +170,13 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="https://paginas-web-cr.com/Api/form/consultarfacturadetalle.php" method="get">
+                        <form action="https://paginas-web-cr.com/Api/form/consultarfacturadetalle.php" method="get" class="was-validated">
                             <div class="form-group">
                                 <label for="id_factura" class="form-label">ID Factura</label>
                                 <input type="text" class="form-control" id="id_factura" name="id_factura"
-                                    placeholder="Digite el ID de la factura">
+                                    placeholder="Digite el ID de la factura" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un ID de factura válido.</div>
                             </div>
 
                             <input type="hidden" name="return_url"
