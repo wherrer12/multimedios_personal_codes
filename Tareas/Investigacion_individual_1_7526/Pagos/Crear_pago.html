@@ -117,19 +117,23 @@
                         aria-haspopup="true" aria-expanded="false">Factura detalle</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="../Factura_detalle/Crear_factura_detalle.html">Crear detalle</a>
+                            <a class="dropdown-item" href="../Factura_detalle/Crear_factura_detalle.html">Crear
+                                detalle</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="../Factura_detalle/Consultar_factura_detalle.html">Consultar detalles</a>
+                            <a class="dropdown-item" href="../Factura_detalle/Consultar_factura_detalle.html">Consultar
+                                detalles</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="../Factura_detalle/Actualizar_factura_detalle.html">Actualizar detalle</a>
+                            <a class="dropdown-item"
+                                href="../Factura_detalle/Actualizar_factura_detalle.html">Actualizar detalle</a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="../Factura_detalle/Eliminar_factura_detalle.html">Eliminar detalle</a>
+                            <a class="dropdown-item" href="../Factura_detalle/Eliminar_factura_detalle.html">Eliminar
+                                detalle</a>
                         </li>
 
                     </ul>
@@ -170,31 +174,42 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="https://paginas-web-cr.com/Api/form/crearpago.php" method="post">
+                        <form action="https://paginas-web-cr.com/Api/form/crearpago.php" method="post"
+                            class="was-validated">
                             <div class="form-group">
                                 <label for="id_factura" class="form-label">ID Factura</label>
                                 <input type="text" class="form-control" id="id_factura" name="id_factura"
                                     placeholder="Digite el ID de la factura" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un id válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="monto" class="form-label">Monto</label>
-                                <input type="text" class="form-control" id="monto" name="monto"
+                                <input type="number" class="form-control" id="monto" name="monto"
                                     placeholder="Digite el monto del pago" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un monto válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="metodo" class="form-label">Metodo</label>
                                 <input type="text" class="form-control" id="metodo" name="metodo"
                                     placeholder="Digite el metodo de pago" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un metodo válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="detalle" class="form-label">Detalle</label>
                                 <input type="text" class="form-control" id="detalle" name="detalle"
                                     placeholder="Digite el detalle del pago" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un detalle válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="usuario" class="form-label">Usuario</label>
                                 <input type="text" class="form-control" id="usuario" name="usuario"
                                     placeholder="Digite el usuario" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un usuario válido.</div>
                             </div>
 
                             <input type="hidden" name="return_url"

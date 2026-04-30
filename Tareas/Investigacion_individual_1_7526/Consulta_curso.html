@@ -170,11 +170,13 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="https://paginas-web-cr.com/Api/form/consultarcurso.php" method="get">
+                        <form action="https://paginas-web-cr.com/Api/form/consultarcurso.php" method="get" class="was-validated">
                             <div class="form-group">
                                 <label for="nombre" class="form-label">Buscar</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre"
                                     placeholder="Digite el nombre" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un nombre válido.</div>
                             </div>
                 
                             <div class="form-group mt-3">

@@ -170,16 +170,20 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="https://paginas-web-cr.com/Api/form/crearfactura.php" method="post">
+                        <form action="https://paginas-web-cr.com/Api/form/crearfactura.php" method="post" class="was-validated">
                             <div class="form-group">
                                 <label for="cliente" class="form-label">Cliente</label>
                                 <input type="text" class="form-control" id="cliente" name="cliente"
                                     placeholder="Digite el nombre del cliente" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese el nombre del cliente.</div
                             </div>
                              <div class="form-group">
                                 <label for="usuario" class="form-label">Usuario</label>
                                 <input type="text" class="form-control" id="usuario" name="usuario"
                                     placeholder="Digite el usuario" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un usuario válido.</div>
                             </div>
 
                             <input type="hidden" name="return_url" value="http://localhost:5001/Tareas/Investigacion_individual_1_7526/Factura/Crear_factura.html">

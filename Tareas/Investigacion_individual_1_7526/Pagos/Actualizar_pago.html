@@ -170,26 +170,34 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="https://paginas-web-cr.com/Api/form/actualizarpago.php" method="post">
+                        <form action="https://paginas-web-cr.com/Api/form/actualizarpago.php" method="post" class="was-validated">
                             <div class="form-group">
                                 <label for="id" class="form-label">ID</label>
                                 <input type="text" class="form-control" id="id" name="id"
                                     placeholder="Digite el ID del pago" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un ID válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="estado" class="form-label">Estado</label>
                                 <input type="text" class="form-control" id="estado" name="estado"
                                     placeholder="Digite el estado del pago" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un estado válido.</div>
                             </div>
                             <div class="form-group">
                                 <label for="fecha" class="form-label">Fecha</label>
-                                <input type="text" class="form-control" id="fecha" name="fecha"
+                                <input type="date" class="form-control" id="fecha" name="fecha"
                                     placeholder="Digite la fecha del pago" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese una fecha válida.</div>
                             </div>
                             <div class="form-group">
                                 <label for="detalle" class="form-label">Detalle</label>
                                 <input type="text" class="form-control" id="detalle" name="detalle"
                                     placeholder="Digite el detalle del pago" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un detalle válido.</div>
                             </div>
 
                             <input type="hidden" name="return_url"

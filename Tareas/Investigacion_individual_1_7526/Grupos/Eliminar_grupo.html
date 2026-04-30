@@ -170,11 +170,13 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="https://paginas-web-cr.com/Api/form/eliminargrupo.php" method="post">
+                        <form action="https://paginas-web-cr.com/Api/form/eliminargrupo.php" method="post" class="was-validated">
                             <div class="form-group">
                                 <label for="id" class="form-label">ID del grupo</label>
                                 <input type="text" class="form-control" id="id" name="id"
                                     placeholder="Digite el ID del grupo" required>
+                                <div class="valid-feedback">Valido</div>
+                                <div class="invalid-feedback">Por favor, ingrese un ID válido.</div>
                             </div>
 
                             <input type="hidden" name="return_url" value="http://localhost:5001/Tareas/Investigacion_individual_1_7526/Grupos/Eliminar_grupo.html">
