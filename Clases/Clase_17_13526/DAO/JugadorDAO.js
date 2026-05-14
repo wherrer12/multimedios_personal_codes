@@ -9,7 +9,7 @@ class JugadorDAO {
     }
 
     actualizar (id, params) {
-        let objetoJugador = consultarId(id);
+        let objetoJugador = this.consultarId(id);
 
         if(objetoJugador){
             objetoJugador.nombre = params.nombre;
