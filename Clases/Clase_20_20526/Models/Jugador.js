@@ -6,7 +6,6 @@ class Jugador{
         this._nacionalidad = nacionalidad;
     }
 
-    //GETTERS
     get nombre(){
         return this._nombre;
     }
@@ -18,8 +17,6 @@ class Jugador{
     get nacionalidad(){
         return this._nacionalidad;
     }
-
-    //SETTERS
 
     set nombre(nombre){
         this._nombre = nombre;
