@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fuentes Bootstrap CSS -->
+     <!-- https://getbootstrap.com/docs/5.3/getting-started/download/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <title>Calculadora</title>
+</head>
+<body>
+     <header class="bg-primary text-dark text-center p-2" >
+         <h1>Calculadora</h1>
+    </header>  
+    <!-- Navegación (no son necesarias)-->    
+    <nav> <!-- <nav class="navbar navbar-expand-lg bg-dark mb-4"> -->
+
+       
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="calculadora shadow-lg">
+           <div class="pantallaCalc mb-3">
+                <div id="historial" class="historial"></div>
+                    <input id="pantalla" class="form-control pantalla" type="text" value="0" readonly>
+            </div>
+            <div class="buttons-grid">
+                <!-- Botones de la calculadora -->
+                <!-- Linea 1 -->  
+                <button id="botonLimpiar" class="btn btn-danger botonesCalc wide" type="button">C</button>
+                <button class="btn btn-warning botonesCalc simboloOperador" type="button" onclick="pressOperator('/')">/</button>
+                <button class="btn btn-warning botonesCalc simboloOperador" type="button" onclick="pressOperator('*')">*</button>
+
+                <!-- Linea 2 -->  
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('7')">7</button>
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('8')">8</button>
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('9')">9</button>
+                <button class="btn btn-warning botonesCalc simboloOperador" type="button" onclick="pressOperator('-')">-</button>
+
+                <!-- Linea 3 -->
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('4')">4</button>
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('5')">5</button>
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('6')">6</button>
+                <button class="btn btn-warning botonesCalc simboloOperador" type="button" onclick="pressOperator('+')">+</button>
+
+                <!-- Linea 4 -->
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('1')">1</button>
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('2')">2</button>
+                <button class="btn btn-light botonesCalc" type="button" onclick="addNumb('3')">3</button>
+                <button id="botonIgual" class="btn btn-warning botonesCalc wideEquals" type="button">=</button>
+
+                <!-- Linea 5 -->
+                <button class="btn btn-light botonesCalc wide" type="button" onclick="addNumb('0')">0</button>
+                <button class="btn btn-light botonesCalc" type="button" onclick="pressDecimal()">.</button>
+                
+            </div>
+        </div>
+            
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p class="mb-0">Elaborado por Wil, 2026</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

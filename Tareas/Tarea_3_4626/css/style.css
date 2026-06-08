@@ -1,0 +1,105 @@
+/* Varaibles para colores*/
+:root {
+    --color-principal: #3498db;
+    --color-secundario: #282b2586;
+    --color-terciario: #323738;
+    --color-cuaternario: #130feb;
+}
+
+/* Dimensiones pantalla */
+*{
+    margin: 6px;
+    padding: 3px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: 
+    linear-gradient(120deg, rgba(218, 194, 240, 0.8), rgba(103, 138, 109, 0.616)), var(--color-cuaternario);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculadora {
+    width: min(100%, 380px);
+    padding: 1rem;
+    background: var(--color-secundario);
+    border: 2px solid var(--color-cuaternario);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pantallaCalc {
+    background: var(--color-terciario);
+    border: 2px solid var(--color-cuaternario);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.historial {
+    min-height: 1.5rem;
+    color: #9898a8;
+    font-size: 0.8rem;
+    text-align: right;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pantalla {
+    height: 4.5rem;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: right;
+    box-shadow: none;
+}
+
+.pantalla:focus {
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+}
+
+.botonesCalc {
+    min-height: 4rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.simboloOperador {
+    color: #e0d0d0;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.wideEquals {
+    grid-row: span 2;
+}
+
+@media (max-width: 360px) {
+    .calculadora {
+        padding: 0.75rem;
+    }
+
+    .buttones-grid {
+        gap: 0.5rem;
+    }
+
+    .botonesCalc {
+        min-height: 3.5rem;
+        font-size: 1.2rem;
+    }
+}
