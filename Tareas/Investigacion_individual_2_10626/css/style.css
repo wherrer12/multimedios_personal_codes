@@ -1,0 +1,297 @@
+/* CSS que define la apariencia  de la pagina */
+
+/* Body con toda la altura de la ventana */
+html, body {
+  min-height: 100%;
+}
+
+/* Estilos generales del documento */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 122px;
+  background: #0d6efd;
+  color: #ffffff;
+}
+
+.titulo-principal h1 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.menu-principal {
+  min-height: 78px;
+  background: #212529;
+}
+
+.menu-principal ul {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-boton {
+  display: block;
+  padding: 22px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 34px;
+  cursor: pointer;
+}
+
+/*  */
+.menu-boton::after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  border-top: 7px solid #ffffff;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  vertical-align: middle;
+}
+
+/* Efecto visual */
+.menu-boton:hover,
+.menu-boton:focus {
+  color: #ffffff;
+  background: #343a40;
+}
+
+/* Submenu oculto */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  display: none;
+  min-width: 180px;
+  padding: 8px 0;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+}
+
+/* submenu  */ 
+.menu-item:hover .submenu, .menu-item:focus-within .submenu {
+  display: block;
+}
+
+/* Botones internos del submenu */
+.submenu button {
+  display: block;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: 0;
+  color: #111111;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Efectos botones */
+.submenu button:hover, .submenu button:focus {
+  background: #f0f0f0;
+}
+
+/*  */
+.contenido {
+  flex: 1;
+  padding: 28px 16px 80px;
+}
+
+/* Principal form o tabla */
+.tarjeta {
+  width: min(100%, 715px);
+  margin: 0 auto;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  overflow: visible;
+}
+
+/**/
+.tarjeta.modo-consulta {
+  width: min(98vw, 1500px);
+}
+
+/* Franja  */
+.tarjeta-titulo {
+  padding: 12px 18px;
+  background: #17c5dd;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Espaciado */
+.tarjeta-cuerpo {
+  padding: 20px 18px 18px;
+}
+
+/* Separacion campos form */
+.campo {
+  margin-bottom: 8px;
+}
+
+/* Etiquetas campo */
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+/* Inputs del form */
+.campo input,
+.campo select {
+  width: 100%;
+  height: 42px;
+  padding: 6px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+/* campo invalido */
+.campo input.invalido,
+.campo select.invalido {
+  border-color: #ff3547;
+  box-shadow: inset 0 0 0 1px #ff3547;
+}
+
+/* Texto de error */
+.error {
+  display: none;
+  margin-top: 7px;
+  color: #ff1f31;
+  font-size: 16px;
+}
+
+/* Mensaje de error */
+.campo input.invalido + .error, .campo select.invalido + .error {
+  display: block;
+}
+
+/* Contenedor botones formulario */
+.acciones-formulario {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+/* Caja de mensajes */
+.mensaje {
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* exito */
+.mensaje.exito {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+/* error */
+.mensaje.error-mensaje {
+  background: #f8d7da;
+  color: #842029;
+}
+
+/* aviso */
+.mensaje.aviso {
+  background: #fff3cd;
+  color: #664d03;
+}
+
+/* ocultar elementos */
+.oculto {
+  display: none;
+}
+
+/* Tamano texto tabla */
+.table {
+  width: max-content;
+  min-width: 100%;
+  font-size: 15px;
+}
+
+/* Permite ver tablas grandes completas usando desplazamiento horizontal */
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+/* Barra horizontal */
+.modo-consulta .table-responsive {
+  overflow-x: scroll;
+}
+
+/* Encabezados de tabla */
+.table th {
+  background: #f2f2f2;
+  white-space: nowrap;
+}
+
+/* Evita que las celdas queden angostas */
+.table td {
+  min-width: 95px;
+  vertical-align: top;
+}
+
+/* Botones Editar y Eliminar de la tabla */
+.botones-tabla {
+  display: flex;
+  gap: 6px;
+  min-width: 170px;
+  white-space: nowrap;
+}
+
+/* Pie de pagina */
+.pie-pagina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 74px;
+  background: #0d6efd;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+/* Ajustes pantallas pequeñas */
+@media (max-width: 900px) {
+  .menu-principal ul {
+    flex-wrap: wrap;
+  }
+
+  .menu-boton {
+    padding: 12px 10px;
+    font-size: 20px;
+  }
+
+  .titulo-principal h1,
+  .tarjeta-titulo {
+    font-size: 32px;
+  }
+}
