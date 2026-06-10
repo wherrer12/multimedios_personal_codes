@@ -42,6 +42,24 @@ function mapeandoTabla(datos) {
             <td scope="row">${element.id}</td>
             <td>${element.nombre}</td>
             <td>${element.usuario}</td>
+            <td>
+                <a 
+                    name=""
+                    id=""
+                    class="btn btn-success"
+                    onclick="cargarEditar(${element.id})"
+                    role="button"
+                    >Editar</a
+                >
+                <a 
+                    name=""
+                    id=""
+                    class="btn btn-danger"
+                    onclick="eliminarCurso(${element.id})"
+                    role="button"
+                    >Eliminar</a
+                >
+            </td>
         </tr>`;
     });
     
@@ -62,7 +80,6 @@ function insertarCurso() {
     let objetoCurso = new Curso(id, nombre, descripcion, tiempo, usuario);
 
     console.log(objetoCurso);
-
 
     const curso = {
         id: id,
@@ -94,4 +111,49 @@ function insertarCurso() {
     })
     .catch(error => console.error(error));
    
+}
+
+function eliminarCurso(id) {
+    alert("Eliminando curso");
+
+    const urlEliminar = URLAPI + eliminar;
+    const datos = {id: id};
+
+    fetch(urlEliminar,
+        {
+            method: "POST",
+            body: JSON.stringify(datos)
+        })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        alert("Curso eliminado con éxito");
+        consultarDatos();
+    })
+    .catch(error => console.error(error));
+
+    /*let datos = {
+        "nombre": "Curso de JavaScript",
+        "descripcion": "Aprende JavaScript desde cero",
+        "tiempo": "4 semanas",
+        "usuario": "Prof. Mario"
+    };
+
+    fetch(urlConsultar,{
+        method: "POST",
+        body: JSON.stringify(datos)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        alert("Curso eliminado con éxito");
+        consultarDatos();
+    })
+    .catch(error => console.error(error)); */
+}
+
+window.eliminarCurso = eliminarCurso;
+
+function editarCurso() {
+    alert("Editando curso");
 }
